@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style/style.css">
+  <title>My Website</title>
+</head>
+
+<style >
+
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img {
+  height: 70%;
+  width: 70%;
+  object-fit: cover;
+}
+p {
+  color: black;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+.section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.section-title span {
+  color: crimson;
+}
+/*button*/
+.cta {
+  
+  padding: 10px 30px;
+  color: white;
+  background-color:blue;
+  border: 2px solid crimson;
+  font-size: 2rem;
+  }
+.cta:hover {
+  color: white;
+  background-color: crimson;
+}
+/*end button*/
+.brand h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+}
+.brand h1 span {
+  color: crimson;
+}
+
+/* Header section */
+  #header {
+  position: fixed;
+  width: 100vw;
+  height: auto;
+}
+#header .header {
+  min-height: 8vh;
+  background-color:rgba(31, 30, 30, 0.24);
+  
+}
+#header .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  padding: 0 10px;
+}
+#header .nav-list ul a {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px;
+  display: block;
+}
+/*background*/
+ #hero::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color:#58B19F;
+  opacity: 0.7;
+  z-index: -1;
+}
+#hero h1 {
+  font-size: 4rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal 0.5s ease forwards;
+  animation-delay: 1s;
+}
+#hero h1:nth-child(1) {
+  animation-delay: 1s;
+}
+#hero h1:nth-child(2) {
+  animation-delay: 2s;
+}
+#hero h1:nth-child(3) {
+  animation: text_reveal_name 0.5s ease forwards;
+  animation-delay: 3s;
+}
+#hero h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: crimson;
+  animation: text_reveal_box 1s ease;
+  animation-delay: 0.5s;
+}
+#hero h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+#hero h1:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span {
+  animation-delay: 2.5s;
+}
+/* End Hero Section */
+/*service section */
+#projects .all-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#projects .project-item {
+   display: flex;
+  align-items: center;
+  }
+#projects .project-info {
+  padding: 30px;
+  flex-basis: 50%;
+  height: 100%;
+ background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: white;
+}
+#projects .project-info p {
+  color: white;
+}
+ #projects .project-img {
+  flex-basis: 50%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+#projects .project-img img {
+  transition: 0.3s ease transform;
+}
+#projects .project-item:hover .project-img img {
+  transform: scale(1.1);
+}
+/* End service section */
+ /* contact Section */
+#contact  {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 10px;
+}
+ .contact-items {
+  width: 100%;
+}
+ .contact-item {
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  padding: 30px;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 18px 0 blue; 
+  transition: 0.3s ease box-shadow;
+}
+ .contact-item:hover {
+  box-shadow: 0px 0px 5px 0 red;
+}
+ /*End contact Section */
+/* Footer*/ 
+#footer {
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#footer .footer {
+  min-height: 200px;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+#footer h2 {
+  color: white;
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#footer .social-icon {
+  display: flex;
+  margin-bottom: 30px;
+}
+#footer .social-item {
+  height: 50px;
+  width: 50px;
+  margin: 0 5px;
+}
+#footer .social-item img {
+  filter: grayscale(1);
+  transition: 0.3s ease filter;
+}
+#footer .social-item:hover img {
+  filter: grayscale(0);
+}
+#footer p {
+  color: white;
+  font-size: 1.3rem;
+}
+/* End Footer */
+/* Keyframes */
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes text_reveal {
+  100% {
+    color: white;
+  }
+}
+@keyframes text_reveal_name {
+  100% {
+    color: crimson;
+    font-weight: 500;
+  }
+}
+/* End Keyframes */
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+  .cta {
+    font-size: 2.5rem;
+    padding: 20px 60px;
+  }
+  /* Hero */
+  #hero h1 {
+    font-size: 7rem;
+  }
+  /* End Hero */
+ /* service section */
+  #projects .project-item {
+    flex-direction: row;
+  }
+  #projects .project-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  #projects .project-item {
+    height: 400px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+  #projects .all-projects .project-info {
+    height: 100%;
+  }
+  #projects .all-projects .project-img {
+    height: 100%;
+  }
+  /* End end service section */
+  /* contact  */
+  #contact .contact {
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+    min-width: 20vh;
+  }
+  #contact .contact-items {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+  }
+  /* End contact  */
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+  /*header page*/
+  #header .hamburger {
+    display: none;
+  }
+  #header .nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+  }
+  #header .nav-list ul li {
+    display: inline-block;
+  }
+  #header .nav-list ul li a {
+    font-size: 1.8rem;
+  }
+  #header .nav-list ul a:after {
+    display: none;
+  }
+  /* End header */
+}
+.contact-map iframe{
+    width: 100%;
+    height: 350px;
+}
+</style>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>A</span>bulance <span>S</span>ervices</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+             <li><a href="#projects" data-after="Qualification">Services</a></li>
+              <li><a href="#services" data-after="Service">Book Now</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+ 
+ <!-- Hero Section  -->
+  <section id="hero">
+
+    <div class="hero container">
+
+      <div>
+
+        <h1>Ambulace <span></span></h1>
+        <h1>services <span></span></h1>
+        <h1>Emergency Booking Now<span></span></h1>
+
+       <a href="#contact" type="button" class="cta" data-after="Contact">
+      <i class="fa fa-phone px-2"></i>
+        <span class=" ">EMERGENCY CALL 24/7</span></a>
+        
+      </div>
+      <img src="./am.jpg" 
+     
+      alt="swarnali" />
+    </div>
+    
+
+  </section>
+  <!-- End Hero Section  -->
+
+  
+  <!--About Section -->
+   <section id="about">
+    
+      <h1 class="section-title">About <span>Us</span></h1>
+        <h2>Emergency ambulace services</h2>
+         <div class="text-left">
+        <h2>We Are Giving Full Medical Support Ambulance Service In Bangladwesh</h2>
+        <h3>Ambulance Bd gives the 24/7 service in Bangladesh. We Provide AC and Non AC Ambulance, Freezing Ambulance, ICO Ambulance services all over Bangladesh with Low coast.
+        ambulance services are one of the reliable and expedite ambulance services in Bangladesh. We specialize in the transportation of critically ill patients by life support ICU ambulance. We have many types of ambulance. Such as ICU ambulance, Freezing ambulance, Hiace AC & Non AC ambulance. our service is provided within a cheap rate. if you want you can hire us. For More details please Contact Us
+        ambulance Services, offering 24 hours of medical transport facilities. Our ambulance services in the whole country at an affordable cost with very affection and car. We as a team is experienced in providing emergency treatments with the shortest span of time. We have a great experience, potential, and abilities to transmit. The patients from the home to the hospitals with great care and affection.</h3>
+        <h2>When you dial 999, the first person you speak to is the Operator who will ask you which service you need. If you ask for an ambulance, you will be put through to your local ambulance service. An emergency call handler will then take the call and will ask you questions so that help can be arranged.</h2>
+        
+
+</div>
+  </section>
+    <!-- End About Section -->
+
+    <!-- service Section -->
+    <section id="projects">
+      <div class="">
+        <div class="projects-header">
+          <h1 class="section-title">Our <span>Ambulance Service</span></h1>
+        </div>
+        <div class="all-projects">
+          <div class="project-item">
+            <div class="project-info">
+              <h1>Ac Ambulance</h1>
+             <h3>Ambulance BD provides AC Ambulance service. So patients can go anywhere safely at any time. We are 24 hours ready to give services to the patients. Our AC Ambulance service is the best fastest service in the country.We always ready to provide any ambulace service from dhaka to all districts in Bangladesh.thehe facilities of Ac ambulance in here: Dowel Ac support for patient Oxygen is totally free for emergency patients Stretcher available for more ill patients.A reliable bed is available for patients Will be seat 7/8 people beside of patients24/7 hours service available.24 hours Ac ambulance service provider company in Dhaka, Mogbazar, Malibag, Basabo, Badda, Danmondi, Mirpur, Sahabag, and Sydabad. We provide also all districts of Bangladesh. 24/7 service available. When you an ambulance just then call in our helpline. </h3>
+            </div>
+           <div class="project-img">
+      <img src="./best.jpg" alt="swarnali" style="width: 100%; height: 100%;"  />
+            </div>
+          </div>
+<div class="project-item">
+            <div class="project-info">
+              <h1> Non Ac Ambulance</h1>
+             <h3> The Non-Ac Ambulance Service Providers in Dhaka, Bangladesh. We provide 24-hour emergency ambulance services in cities and district level cities. We also provide Ac ambulance service which arranges an ambulance in the city. It is a vehicle without an air conditioning system.Non-Ac ambulance service is the lowest at price. When people face an emergency moment then, they are felling tension about the cost of the service. I required them Non-Ac ambulances will be the first choice for them. Non-Ac ambulances have almost the same facilities as Ac ambulances. You can customize to your needs. Don’t worry about charges. All of these benefits are free. You don’t have to pay for it.The Non-Ac ambulance service use from us in Dhaka city. It is a perfect service for people with limited income. 24 hours private ambulance service available in Dhaka.24 hours Non-Ac ambulance service provider company in Dhaka, Mogbazar, Malibag, Basabo, Badda, Danmondi, Mirpur, Sahabag, and Sydabad. We provide also all districts of Bangladesh. 24/7 service available. When you an ambulance just then call in our helpline.</h3>
+            </div>
+           <div class="project-img">
+      <img src="./nn.jpg" alt="swarnali" style="width: 100%; height: 100%;"  />
+            </div>
+          </div>
+          
+
+
+          <div class="project-item">
+            <div class="project-info">
+              <h1>Freezing ambulace</h1>
+              <h3>A freezer ambulance is a dead body carrier ambulance. It has a frozen box. The freezer ambulance can keep the corpse intact for several hours and days. People who want to keep their relatives’ corpses intact or free from germs or viruses for several hours or several days can hire our fridge ambulance. Sometimes you need this ambulance service if the bodies come from abroad or you have to stay for more than 12 hours before burying them.The fridge ambulance has a freezer box and the body shape features that the coffin can carry. The ventilation system is good to keep the air inside the ambulance refreshed. Always alert for trained drivers and assistant services. Necessary fuel is stored so that ambulance engines never stop because there is a shortage of diesel pumps in rural areas. </h3>
+
+            </div>
+            <div class="project-img">
+      <img src="./Fo.jpg" alt="swarnali" style="width: 100%; height: 100%;"  />
+            </div>
+
+          </div>
+          <div class="project-item">
+            <div class="project-info">
+             <h1>ICU & CCU Ambulace </h1>
+             <h3>The ICU ambulance service is an Emergency service that carries seriously injured patients to the hospital. We can see an ambulance in the street with an emergency warning light and siren (L&S). they are always ready to observe their duty to take care of a serious patient and to take him/her to any nearby hospital.You can find ICU ambulance service anywhere in the country you are living in but specifically, in Bangladesh, you have to find a good ICU ambulance that can keep its job perfectly. This is why we are here; we have gathered a bunch of information that includes the availability of different ICU ambulance services in the different locality in our country.Life support ambulance services are those which have the emergency kit to support the patient who is in the condition to go. Like patients who,Needs continuous IV medicinepatient on a cardiac monitor patients who need to take a high level of care until taking to the hospital patients on a chronic ventilator the patient does not seem to be breathing the condition of the patient seems to be extremely unsafe condition</h3> 
+           </div>
+          <div class="project-img">
+      <img src="./icu.jpg" alt="swarnali" style="width: 100%; height: 100%;"  />
+            </div>
+           </div>
+
+
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>  
+<!-- service Section -->
+
+      <section id="services">
+  <div class=" ">
+    <div>
+      <h1 class="section-title"><span>B</span>ooking <span>Now</span></h1>
+    </div>
+ 
+<!--booking form-->
+<!--form-->
+  <div class="container-fluid" style="font-size: 16px;">
+    <div class="row">
+      <div class="col-md-2 col-sm-1 col-xs-1"></div>
+      <div class="col-md-8 col-sm-9 col-xs-9">
+    <form class="border bg-info text white">
+      <div class="form-group">
+        <h1 class="text-dark">Booking form</h1>
+        <label>User Name:</label>
+          <input type="text" name="username" class="form-control" placeholder="Enter user name">
+      </div>
+      <div class="form-group">
+        <label>Patient Name:</label>
+          <input type="text" name="patientname" class="form-control"placeholder="Enter patient name">
+      </div>
+      <div class="form-group">
+            <label>Phone:</label>
+              <input type="text" name="phone" class="form-control" placeholder="">
+          </div>
+          <div class="form-group">
+            <label>From Address:</label>
+              <input type="text" name="address" class="form-control" placeholder="Enter address">
+          </div>
+          
+          <div class="form-group">
+            <label>Date of Booking:</label>
+              <input type="Date" name="bookingdate" class="form-control" placeholder="enter">
+          </div>
+          <div class="form-group">
+            <label>Booking Time:</label>
+              <input type="time" name="bookingtime" class="form-control" placeholder="enter">
+          </div>
+          <div class="form-group mt-1">
+              <input type="submit" style="float:right;" class="btn btn-success btn-lg btn-block " value="Submit">
+          </div>
+        </form>
+      </div>
+        <div class="col-md-2 col-sm-1 col-xs-1"></div>
+        </div>
+      </div>
+<!--end form-->
+
+     </div>
+    
+    </div>
+  </div>
+</section>
+<!-- End Booking Section -->
+
+<!-- Contact Section -->
+ <section id="contact">
+  <div class=" ">
+    <div>
+      <h1 class="section-title">Contact <span>info</span></h1>
+    </div>
+    <div class="contact-items">
+      <div class="contact-item">
+        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
+        <div class="contact-info">
+          <h1> Emergency Call</h1>
+           <h2>999</h2>
+          <h2>01534123123</h2>
+          <h2>01712341231</h2>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
+        <div class="contact-info">
+          <h1>Email</h1>
+          <h2>Shawrnali@gmail.com</h2>
+          <h2>alibaswarnali@gmail.com</h2>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/map-marker.png" /></div>
+        <div class="contact-info">
+          <h1>Our Branch</h1>
+          <h2>Dhanmondi</h2>
+           <h2>Mouchak</h2>
+            <h2>Malibag</h2>
+             <h2>Modhubag</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Contact Section -->
+
+<div class="container-fluid pl-0 pr-0 pb-0">
+        <div class="col-md-12 mt-3 pl-0 pr-0">
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.232860964324!2d90.38647931450198!3d23.739074195126914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b8aa1e1d4f%3A0x6cd8f5937dd4e45c!2sBata+Signal+Bus+Stop!5e0!3m2!1sbn!2sbd!4v1464717357438" class="main-map" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+<!-- Footer -->
+<section id="footer">
+  <div class="footer container">
+    <div class="brand">
+      <h1><span>A</span>mbulace <span>S</span>ervices</h1>
+    </div>
+    <h2>Contact Us Social Platform</h2>
+    <div class="social-icon">
+      <div class="social-item">
+        <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+      </div>
+      <div class="social-item">
+        <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+      </div>
+      <div class="social-item">
+        <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
+      </div>
+      <div class="social-item">
+        <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+<!-- End Footer -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
